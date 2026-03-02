@@ -18,6 +18,11 @@ English version: [README.en.md](README.en.md)
 - `course_practices/`
   - 各單元練習教材（例如 `ws1-u01_en.md`、`ws2-u06_en.md`）
 
+## 課程大綱連結
+
+- 中文版大綱：[syllabuses/syllabus_114B_ch.md](syllabuses/syllabus_114B_ch.md)
+- 英文版大綱：[syllabuses/syllabus_114B_en.md](syllabuses/syllabus_114B_en.md)
+
 ## 學生使用方式
 
 1. 先閱讀 `syllabuses/` 中的大綱，掌握每週學習目標。

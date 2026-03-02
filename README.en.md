@@ -19,6 +19,11 @@ It is designed for students to learn SQL step by step through weekly practices a
 - `course_practices/`
   - Practice handouts by workshop/unit (e.g., `ws1-u01_en.md`, `ws2-u06_en.md`)
 
+## Syllabus Links
+
+- Chinese syllabus: [syllabuses/syllabus_114B_ch.md](syllabuses/syllabus_114B_ch.md)
+- English syllabus: [syllabuses/syllabus_114B_en.md](syllabuses/syllabus_114B_en.md)
+
 ## How To Use This Repository (for Students)
 
 1. Start with the syllabus in `syllabuses/` to understand weekly goals.
