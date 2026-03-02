@@ -17,31 +17,31 @@ Ch3-->LimitRow
 Ch3-->RowProcess
 Ch3-->SubVar
 
-LimitRow("Restrict rows (WHERE clause)")-->SingleCondition("Operators for a single condition")
-subgraph Operators used within a single condition
-SingleCondition---CompOper("Comparison operators")
-SingleCondition---RangeOper("Range comparison (BETWEEN)")
-SingleCondition---ExistInSet("Set membership test (IN)")
-SingleCondition---PatternOper("Pattern matching (LIKE)")
-SingleCondition---NullCond("NULL checking")
+LimitRow("限制資料列 Where Clause")-->SingleCondition("單一條件的運算子")
+subgraph 單一條件內使用的運算子
+SingleCondition---CompOper("比較運算子 Comparison Operator")
+SingleCondition---RangeOper("區間比較 BETWEEN Operator")
+SingleCondition---ExistInSet("集合中的元素判斷 IN Operator")
+SingleCondition---PatternOper("樣式比對 LIKE Operator")
+SingleCondition---NullCond("NULL 值的判斷")
 end
 
-LimitRow-->MultipCond("Logical operators combining multiple conditions (AND, OR, NOT)")
-SingleCondition-->RulePref("Operator precedence")
+LimitRow-->MultipCond("結合多個單一條件的邏輯運算子 AND, OR, NOT")
+SingleCondition-->RulePref("運算子的優先順序")
 MultipCond-->RulePref
 
-RowProcess("Post-processing result rows")-->SortRow("Sort rows (ORDER BY clause)")
-SortRow-->TopNRow("Return top rows after sorting (OFFSET + FETCH clauses)")
+RowProcess("結果資料列的進一步處理")-->SortRow("排序資料列 Order By Clause")
+SortRow-->TopNRow("取回排序後的前幾筆資料 OFFSET + FETCH clauses")
 
 
-SubVar("Reusable queries: substitution variable (&)")-->PlaceToUse("Where to use")
-PlaceToUse-->WhereCond("Use in WHERE clause")
-PlaceToUse-->ColList("Use in the SELECT list")
-SubVar-->DefineVar("Define substitution variable values (DEFINE command)")
-SubVar-->ReuseVar("Reuse substitution variable values (&&)")
+SubVar("重複使用查詢:替代變數 &")-->PlaceToUse("在那裡使用")
+PlaceToUse-->WhereCond("在 Where Clause 中使用")
+PlaceToUse-->ColList("在欄位列表中使用")
+SubVar-->DefineVar("定義替代變數的值 DEFINE command")
+SubVar-->ReuseVar("重覆使用替代變數的值 &&")
 ```
 
-## Practice
+## 練習
 
 ### P1
 
@@ -142,3 +142,4 @@ Display the last name, job, and salary for all employees whose jobs are either t
 ### P15
 
 Create a report to display the last name, salary, and commission for all employees whose commission is 20%.
+

@@ -16,10 +16,10 @@ export_on_save:
 
 ```mermaid
 graph LR;
-HRDBTable(HR Database Table);
+HRDBTable("HR Database Table");
 
-ERModel(ER Model)-->HRDBTable;
-DevTool(Development Tool)
+ERModel("ER Model")-->HRDBTable;
+DevTool("Development Tool")
 ```
 
 ## Practice 1

@@ -15,28 +15,28 @@ export_on_save:
 ```mermaid
 graph LR;
 
-SubqueryTypeByRow("Classify subqueries by number of returned rows (inner query)")-->SingleRowSubquery("Single-row subquery")
-SubqueryTypeByRow-->MultipleRowSubquery("Multiple-row subquery")
-SingleRowSubquery-->SingleRowOperator("Single-row operators")
-MultipleRowSubquery-->MultipleRowOperator("Multiple-row operators")
-MultipleRowOperator-->AnyOperator("ANY operator (any row)")
-MultipleRowOperator-->AllOperator("ALL operator (all rows)")
+SubqueryTypeByRow("依回傳列數分類 subquery (Inner Query)")-->SingleRowSubquery("單列子查詢 Single-Row")
+SubqueryTypeByRow-->MultipleRowSubquery("多列子查詢 Multiple-Row")
+SingleRowSubquery-->SingleRowOperator("單列查詢運算子 Single-Row Operator")
+MultipleRowSubquery-->MultipleRowOperator("多列查詢運算子")
+MultipleRowOperator-->AnyOperator("ANY Operator 任一列")
+MultipleRowOperator-->AllOperator("ALL Operator 全部列")
 
-WhereToUse("Where subqueries can be used")-->UsedInFromClause("FROM clause")
+WhereToUse("子查詢可使用的地方")-->UsedInFromClause("FROM clause")
 WhereToUse-->UsedInWhereClause("WHERE clause")
 WhereToUse-->UsedInHavingClause("HAVING clause")
-UsedInWhereClause-->ExecuteOrder("Execution order")
+UsedInWhereClause-->ExecuteOrder("執行順序")
 UsedInHavingClause-->ExecuteOrder
 
-SubqueryTypeByColumn("Classify subqueries by number of columns")-->SingleColumnSubquery("Single-column subquery (scalar subquery)")
-SubqueryTypeByColumn-->MultipleColumnSubquery("Multiple-column subquery")
-MultipleColumnSubquery-->PairwiseCompare("Pairwise comparison")
-MultipleColumnSubquery-->NonPairwiseCompare("Non-pairwise comparison")
+SubqueryTypeByColumn("依欄位數分類 subquery")-->SingleColumnSubquery("單欄 subquery (Scalar Subquery)")
+SubqueryTypeByColumn-->MultipleColumnSubquery("多欄 Subquery")
+MultipleColumnSubquery-->PairwiseCompare("成對比較")
+MultipleColumnSubquery-->NonPairwiseCompare("非成對比較")
 
-MultipleRowOpEquivalent("Equivalence among multi-row comparison operators")
+MultipleRowOpEquivalent("多列比較運算子間的對等性")
 ```
 
-## Exercises
+## 題目
 
 ### Q1
 
@@ -74,7 +74,7 @@ E. They should not be used with the NOT IN operator in the main query if NULL is
 
 <!-- Q-89, 1z0-47 dump -->
 
-For each incorrect option, explain why it is incorrect.
+錯誤選項請寫出原因。
 
 ### Q5 
 
@@ -94,7 +94,7 @@ F. Multiple columns or expressions can be compared between the subquery and main
 
 <!-- Q-41, 1z0-47 dump -->
 
-For each incorrect option, explain why it is incorrect.
+錯誤選項請寫出原因。
 
 ### Q6
 
@@ -114,12 +114,12 @@ D. displaying all supplier IDs whose average list price is more than 500
 
 E. displaying the minimum list price for each product status
 
-In addition to choosing the correct option, write the query required for that option.
+除了選出正確選項外, 還要寫出該選項所需的 Query。
 
 
 ### Q7
 
-Find the most senior employee(s) in each location (there may be more than one), and list employee_id, first_name, hire_date, department_id, and location_id.
+找出每個 location 下最資深的員工(可能有多個), 列出員工的 employee_id, first_name, hire_date, department id, location id.
 
 <!-- Multiple-Row, Multiple-Column subquery -->
 

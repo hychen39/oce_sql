@@ -14,7 +14,7 @@ export_on_save:
 
 ```mermaid
 graph LR;
-  JoinType("Join forms")
+  JoinType("Join 的形式")
 
   JoinType-->NaturalJoin("Natural Join or Equal Join")
   JoinType-->SelfJoin("Self Join")
@@ -24,16 +24,16 @@ graph LR;
   OuterJoin-->LeftOuter("Left Outer Join")
   OuterJoin-->RightOuter("Right Outer Join")
 
-  JoinMethod("Join methods")
-  UseSameColName("Automatically use same-named columns from both tables (NATURAL JOIN)")
-  SpecifyColumn("Join by specified columns (JOIN ... USING)")
-  SpecifyCondition("Join by specified condition (JOIN ... ON)")
+  JoinMethod("Join 的方式")
+  UseSameColName("自動使用兩個表格中相同的欄位名稱 NATURE JOIN table")
+  SpecifyColumn("指定欄位 JOIN table USING column")
+  SpecifyCondition("指定條件 JOIN table ON condition")
   JoinMethod-->UseSameColName
   JoinMethod-->SpecifyColumn
   JoinMethod-->SpecifyCondition
 ```
 
-## Exercises
+## 題目
 
 ### Q1
 Write a query for the HR department to produce the addresses of all the departments. Use the `LOCATIONS` and `COUNTRIES` tables. 
@@ -90,4 +90,5 @@ Create a query to display the name and hire date of any employee hired after emp
 The HR department needs to find the names and hire dates of all employees who were hired before their managers, along with their managers’ names and hire dates.
 
 ![](img-01/u07-i07.png)
+
 

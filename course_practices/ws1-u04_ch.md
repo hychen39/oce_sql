@@ -15,14 +15,14 @@ export_on_save:
 
 ```mermaid
 graph LR;
-TypeSQLFun("Types of SQL functions")-->SingleRow("Single-row functions")
-TypeSQLFun-->MultipleRow("Multiple-row functions")
+TypeSQLFun("SQL 函數的型態")-->SingleRow("單一資料列函數 Single Row Function")
+TypeSQLFun-->MultipleRow("多列資料函數")
 
-SingleRow-->CharFun("Character functions")
-SingleRow-->NumFun("Numeric functions")
-SingleRow-->DateFun("Date functions")
+SingleRow-->CharFun("字元處理相關函數")
+SingleRow-->NumFun("數字處理相關函數")
+SingleRow-->DateFun("日期處理相關函數")
 
-NestFun("Nested functions")
+NestFun("巢狀函數 Nested Functions")
 ```
 
 ## Practices
@@ -34,7 +34,7 @@ Write a query to display the system date. Label the column Date.
 
 ### P2
 
-The HR department needs a report to display the employee number, last name, salary, and salary increased by 15.5% (expressed as a whole number (integer) ) for each employee. Label the column New Salary. 
+The HR department needs a report to display the employee number, last name, salary, and salary increased by 15.5% (expressed as a whole number (整數) ) for each employee. Label the column New Salary. 
 
 ![](img-01/u04-i01.png)
 

@@ -11,14 +11,14 @@ export_on_save:
 
 # U06 Reporting Aggregated Data Using the Group Functions
 
-Group rows and calculate aggregates
+資料列分群並計算分群後的彙總資料
 ```mermaid
 graph TD;
-RestrictRows("Filter rows before grouping (WHERE clause)")
-ColToGroup("Columns used for grouping (GROUP BY clause)")
-GroupFun("Aggregate functions for each group") 
-RestrictGroup("Filter groups (HAVING clause)")
-OrderGroup("Sort groups (ORDER BY clause)")
+RestrictRows("分群前篩選資料 WHERE clause")
+ColToGroup("用來分群的欄位 GROUP BY clause")
+GroupFun("各群的彙總資料計算函數 Group Functions") 
+RestrictGroup("篩選分群 HAVING clause")
+OrderGroup("排序分群 ORDER BY clause")
 
 RestrictRows-->ColToGroup
 ColToGroup-->GroupFun
@@ -30,16 +30,16 @@ Group Functions
 ```mermaid
 graph LR;
 GroupFun
-AggDistinct("Aggregate distinct values (DISTINCT) ")
-IgnoreValue("NULL values ignored by default ")
-NestGroups("Nested aggregate functions (up to 2 levels)")
+AggDistinct("彙總不同的值 DISTINCT ")
+IgnoreValue("預設忽略 Null Value ")
+NestGroups("巢狀彙總函數 最多 2 levels")
 
 GroupFun-->AggDistinct
 GroupFun-->IgnoreValue
 GroupFun-->NestGroups
 ```
 
-## Practice
+## 練習
 
 ### Q1
 
@@ -75,6 +75,7 @@ Create a report to display the manager id and the salary of the lowest-paid empl
 Create a query that displays the total number of employees and, of that total, the number of employees hired in 2009, 2010, 2011, and 2012. Create appropriate column headings.
 
 ![](img-01/u06-i05.png)
+
 
 
 

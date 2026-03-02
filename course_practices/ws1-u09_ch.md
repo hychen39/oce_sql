@@ -22,13 +22,13 @@ Types-->Union("UNION and UNION ALL")
 Types-->Interset
 Types-->Minus
 
-Rules-->MatchColNumber("Each row set must have the same number of columns")
-Rules-->MatchColDataType("Column data types in other row sets must match the corresponding columns in the first row set")
-Rules-->OrderByAtEnd("ORDER BY must appear at the end")
+Rules-->MatchColNumber("每個 Row Set 的欄位數必須相同")
+Rules-->MatchColDataType("其他 Row Set 的欄位型態必須和第一個 Row Set 的相對應欄位的型態相同")
+Rules-->OrderByAtEnd("ORDER BY 在最後面")
 
 ```
 
-## Exercises
+## 題目
 
 ### Q1
 
@@ -95,7 +95,7 @@ C. The statement would execute successfully but it will ignore the ORDER BY clau
 
 D. The statement would not execute because the ORDER BY clause should appear only at the end of the SQL statement, that is, in the last SELECT statement.
 
-Explain the reason.
+請說明原因.
 
 
 ### Q6
@@ -109,7 +109,7 @@ B. Null values are not ignored during duplicate checking.
 C. Names of all columns must be identical across all select statements.
 D. The number of columns selected in all select statements need not be the same.
 
-Explain why the incorrect options are wrong.
+請說明錯誤選項的原因.
 
 ### Q7
 
@@ -122,5 +122,5 @@ B. It ignores NULL values.
 C. Reversing the order of the intersected tables alters the result.
 D. The number of columns and data types must be identical for all SELECT statements in the query.
 
-Explain why the incorrect options are wrong.
+請說明錯誤選項的原因.
 

@@ -15,23 +15,23 @@ export_on_save:
 
 ```mermaid
 graph LR;
-ConvTypes("Type conversion methods")-->ImplicitConv("System implicit conversion")
-ConvTypes-->ExplicitConv("Explicit conversion")
+ConvTypes("資料型態轉換方式")-->ImplicitConv("系統自動轉換 Implicit Conversion")
+ConvTypes-->ExplicitConv("程式轉換 Explicit Conversion")
 
-ImplicitConv-->CharDateChar("Character <> Date")
-ImplicitConv-->CharNumChar("Character <> Number")
+ImplicitConv-->CharDateChar("文字 <> 日期")
+ImplicitConv-->CharNumChar("文字 <> 數字")
 
-ExplicitConv-->Char2Date("Character -> Date (TO_DATE function)")
-ExplicitConv-->Char2Num("Character -> Number (TO_NUMBER function)")
-ExplicitConv-->Num2Char("Number -> Character (TO_CHAR function)")
-ExplicitConv-->Num2Date("Date -> Character (TO_CHAR function)")
+ExplicitConv-->Char2Date("文字 > 日期 To_Date 函數")
+ExplicitConv-->Char2Num("文字 > 數字 To_Number 函數")
+ExplicitConv-->Num2Char("數字 > 文字 To_Char 函數")
+ExplicitConv-->Num2Date("日期 > 文字 To_Char 函數")
 
-FormatModel("Format models")-->DateFmtModel("Date format")
-FormatModel("Format models")-->NumFmtModel("Number format")
+FormatModel("轉換格式模型")-->DateFmtModel("日期格式")
+FormatModel("轉換格式模型")-->NumFmtModel("數字格式")
 
-NullValFun("NULL-handling functions")
+NullValFun("Null 值處理函數")
 
-CondExp("Conditional expressions")
+CondExp("條件運算式")
 CondExp-->SimpleCaseExp
 CondExp-->SearchCaseExp
 CondExp-->DecodeExp
@@ -105,4 +105,5 @@ C. SELECT NVL (MONTHS_BETWEEN (start_date, end_date), 'Ongoing') FROM programs;
 D. SELECT NVL (TO_CHAR(MONTHS_BETWEEN (start-date, end_date)), 'Ongoing') FROM programs
 
 Please provide the reasons for the wrong options.
+
 
