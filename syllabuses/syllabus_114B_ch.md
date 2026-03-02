@@ -42,35 +42,51 @@ Updated on 2026/03/02
 
 ## 課程大綱
 
-主題安排策略: 查詢 > 資料表及限制 > 資料字典 > 資料庫其它物件 > 物件的授權管理
+主題安排策略: 查詢與報表 > 資料表及限制 > 資料字典 > 資料庫其它物件 > 物件的授權管理
 
-資料查詢與報表: 排序、單列函數、轉換函數、條件運算式、聚合函數
-WS1 Unit 01 - 06
+### 查詢與報表
 
-資料查詢進階 1: 資料表合併查詢、子查詢、合併多合查詢的結果(Set operator)
-WS1 Unit 07 - 09
+基礎查詢與報表
 
-資料查詢進階 2: 純量子查詢、成對比較子查詢、相依子查詢、子查詢的分解、DML 中使用子查詢
-WS2 Unit 06, 07, 09
+- 排序、單列函數、轉換函數、條件運算式、聚合函數
+  - WS1 Unit 01 - 06
 
-資料表的內容建立、更新、與刪除
-WS1 Unit 10
+資料查詢進階 1
 
-建立資料表及表格限制式 
-WS1 Unit 11, WS2 Unit5 Constraint object
+- 資料表合併查詢、子查詢、合併多合查詢的結果(Set operator)
+  - WS1 Unit 07 - 09
 
-檢視資料庫中的物件: 資料字典視圖(Data Dictionary View)
-WS2 Unit 02
+資料查詢進階 2
 
-建立資料庫其它物件: 序列器、同義詞、索引、及視圖(View)、外部表格
-WS2 Unit 03, 04, 05 External Table
+- 純量子查詢、成對比較子查詢、相依子查詢、子查詢的分解、DML 中使用子查詢
+  - WS2 Unit 06, 07, 09
+- 資料表的內容建立、更新、與刪除
+  - WS1 Unit 10
 
-物件的授權管理
-WS2 Unit 08
+### 建立資料表及表格限制式 
+
+- 建立資料表及表格限制式 
+  - WS1 Unit 11, WS2 Unit5 Constraint object
+
+### 檢視資料庫中的物件
+
+- 資料字典視圖(Data Dictionary View)
+  - WS2 Unit 02
+
+### 其它資料庫物件
+
+- 建立資料庫其它物件: 序列器、同義詞、索引、及視圖(View)、外部表格
+  - WS2 Unit 03, 04, 05 External Table
+
+### 物件的授權管理
+
+- 物件的授權管理
+  - WS2 Unit 08
 
 
 
 ## 教學進度安排
+
 - 第01週 ：	Oracle 商用資料庫及開發工具介紹	
   - [WS1-U01 Entity Relationship (ER) Model and Table Structure](../course_practices/ws1-u01_ch.md)
   - [WS1-U02 Retrieving Data the SQL SELECT statement](../course_practices/ws1-u02_ch.md)
@@ -89,18 +105,18 @@ WS2 Unit 08
   - [WS1-U04 Using single row functions to customize report](../course_practices/ws1-u04_ch.md)
   - [WS1-U05 Using conversion function and conditional expression](../course_practices/ws1-u04_ch.md)
 
-- 第05週：	放假(春假 4/2 - 4/7)
+- 第05週： 放假(春假 4/2 - 4/7)
   
-- 第06週：	資料查詢進階 1: 資料表合併查詢、子查詢、合併多合查詢的結果(Set operator)
+- 第06週： 資料查詢進階 1: 資料表合併查詢、子查詢、合併多合查詢的結果(Set operator)
   - [WS1-U6 Reporting Aggregated Data Using the Group Functions](../course_practices/ws1-u06_ch.md)
   - [WS1-U7 Displaying Data from Multiple Tables Using Joins](../course_practices/ws1-u07_ch.md)
 
 
-- 第07週：	資料查詢進階 2: 資料表合併查詢、子查詢、合併多合查詢的結果(Set operator)
+- 第07週： 資料查詢進階 2: 資料表合併查詢、子查詢、合併多合查詢的結果(Set operator)
   -  WS1-U7 作業檢討
   - [WS1-U8 Using Subqueries to Solve Queries](../course_practices/ws1-u08_ch.md)
 
-- 第08週：	資料查詢進階 2: 資料表合併查詢、子查詢、合併多合查詢的結果(Set operator)
+- 第08週： 資料查詢進階 2: 資料表合併查詢、子查詢、合併多合查詢的結果(Set operator)
   
 - 第09週: 放假(5/1 勞動節)
 
@@ -134,11 +150,7 @@ WS2 Unit 08
   - WS1-U11 Introduction to Data Definition Language (DDL)
   - Assignment [WS1-u11](../course_practices/ws1-u11_ch.md)
   
-- 第16週：	檢視資料庫中的物件: 資料字典視圖(Data Dictionary View)
-  - WS1-u11 作業檢討
-  - WS2-U2 Introduction to Data Dictionary View
-  - WS2-U5 Part I Managing schema objects: Managing constraints
-  - Assignment [WS1-u5](../course_practices/ws2-u05.md)
+- 第16週：放假(6/19 端午節)
 
 - 第17週：	期末考
     
@@ -181,6 +193,3 @@ WS2 Unit 08
 - [Information and study materials for 1Z0-071: Oracle Database 12c SQL @  Matthew Morris](http://www.oraclecertificationprep.com/apex/f?p=OCPSG:EXAM_DETAILS:::NO::P2_EXAM:1Z0-071)
 
 
-
-
-  
