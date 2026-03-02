@@ -172,7 +172,7 @@ Updated on 2026/03/02
 
 建議輸出 Study Guide 檔案為紙本, 以利上課及考試準備.
 
-- [Study guides Volume 1 and 2 下載](https://o365cyut-my.sharepoint.com/:u:/g/personal/t2005022_o365_cyut_edu_tw/Ea-pRMN02fRNiD3-7FmLRFABob6DOBmLx0i2WWAFbsMtTw?e=pVgb0d)
+下載連結於 TronClass 上公告。
 
 
 注意:
@@ -183,6 +183,8 @@ Updated on 2026/03/02
 
 
 ## 其它參考資料
+
+- 辜輝趂. (2021). Oracle資料庫SQL學習經典 : 融入OCA DBA國際認證 (初版). 碁峰資訊. (圖書館紙本)
 
 - Brumm, B. (2019). Beginning Oracle SQL for Oracle Database 18c : from novice to professional. In Springer eBooks. Apress. https://doi.org/10.1007/978-1-4842-4430-2 (Ebook available at CYUT library)
 
