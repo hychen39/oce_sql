@@ -17,28 +17,28 @@ Ch3-->LimitRow
 Ch3-->RowProcess
 Ch3-->SubVar
 
-LimitRow(Restrict rows (WHERE clause))-->SingleCondition(Operators for a single condition)
+LimitRow("Restrict rows (WHERE clause)")-->SingleCondition("Operators for a single condition")
 subgraph Operators used within a single condition
-SingleCondition---CompOper(Comparison operators)
-SingleCondition---RangeOper(Range comparison (BETWEEN))
-SingleCondition---ExistInSet(Set membership test (IN))
-SingleCondition---PatternOper(Pattern matching (LIKE))
-SingleCondition---NullCond(NULL checking)
+SingleCondition---CompOper("Comparison operators")
+SingleCondition---RangeOper("Range comparison (BETWEEN)")
+SingleCondition---ExistInSet("Set membership test (IN)")
+SingleCondition---PatternOper("Pattern matching (LIKE)")
+SingleCondition---NullCond("NULL checking")
 end
 
-LimitRow-->MultipCond(Logical operators combining multiple conditions (AND, OR, NOT))
-SingleCondition-->RulePref(Operator precedence)
+LimitRow-->MultipCond("Logical operators combining multiple conditions (AND, OR, NOT)")
+SingleCondition-->RulePref("Operator precedence")
 MultipCond-->RulePref
 
-RowProcess(Post-processing result rows)-->SortRow(Sort rows (ORDER BY clause))
-SortRow-->TopNRow(Return top rows after sorting (OFFSET + FETCH clauses))
+RowProcess("Post-processing result rows")-->SortRow("Sort rows (ORDER BY clause)")
+SortRow-->TopNRow("Return top rows after sorting (OFFSET + FETCH clauses)")
 
 
-SubVar(Reusable queries: substitution variable (&))-->PlaceToUse(Where to use)
+SubVar("Reusable queries: substitution variable (&)")-->PlaceToUse("Where to use")
 PlaceToUse-->WhereCond(Use in WHERE clause)
 PlaceToUse-->ColList(Use in the SELECT list)
-SubVar-->DefineVar(Define substitution variable values (DEFINE command))
-SubVar-->ReuseVar(Reuse substitution variable values (&&))
+SubVar-->DefineVar("Define substitution variable values (DEFINE command)")
+SubVar-->ReuseVar("Reuse substitution variable values (&&)")
 ```
 
 ## Practice
@@ -142,4 +142,3 @@ Display the last name, job, and salary for all employees whose jobs are either t
 ### P15
 
 Create a report to display the last name, salary, and commission for all employees whose commission is 20%.
-

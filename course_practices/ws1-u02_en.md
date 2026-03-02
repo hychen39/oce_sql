@@ -15,11 +15,11 @@ export_on_save:
 
 ```mermaid
 graph LR;
-SelectCol(Select columns from a table)-->ColArithExp(Column arithmetic (Arithmetic operators))
-ColArithExp-->ColAlias(Column alias )
-SelectCol-->ColConcate(Column concatenation)
+SelectCol("Select columns from a table")-->ColArithExp("Column arithmetic (Arithmetic operators)")
+ColArithExp-->ColAlias("Column alias")
+SelectCol-->ColConcate("Column concatenation")
 ColConcate-->ColAlias
-ColArithExp-->QOperator(Quote Operator q)
+ColArithExp-->QOperator("Quote Operator q")
 ```
 
 ## Practice
@@ -60,7 +60,6 @@ The HR department wants to display each employee's manager employee ID. Use the 
 ` [Employee_id] [Last_name]'s manager_id is [manager_id] `
 
 Items in brackets are column names. Name this column `Employee's Manager ID List`.
-
 
 
 

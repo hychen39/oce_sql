@@ -25,9 +25,9 @@ graph LR;
   OuterJoin-->RightOuter(Right Outer Join)
 
   JoinMethod(Join methods)
-  UseSameColName(Automatically use same-named columns from both tables (NATURAL JOIN))
-  SpecifyColumn(Join by specified columns (JOIN ... USING))
-  SpecifyCondition(Join by specified condition (JOIN ... ON))
+  UseSameColName("Automatically use same-named columns from both tables (NATURAL JOIN)")
+  SpecifyColumn("Join by specified columns (JOIN ... USING)")
+  SpecifyCondition("Join by specified condition (JOIN ... ON)")
   JoinMethod-->UseSameColName
   JoinMethod-->SpecifyColumn
   JoinMethod-->SpecifyCondition
@@ -90,5 +90,4 @@ Create a query to display the name and hire date of any employee hired after emp
 The HR department needs to find the names and hire dates of all employees who were hired before their managers, along with their managers’ names and hire dates.
 
 ![](img-01/u07-i07.png)
-
 

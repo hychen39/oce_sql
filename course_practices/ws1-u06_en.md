@@ -14,11 +14,11 @@ export_on_save:
 Group rows and calculate aggregates
 ```mermaid
 graph TD;
-RestrictRows(Filter rows before grouping (WHERE clause))
-ColToGroup(Columns used for grouping (GROUP BY clause))
+RestrictRows("Filter rows before grouping (WHERE clause)")
+ColToGroup("Columns used for grouping (GROUP BY clause)")
 GroupFun(Aggregate functions for each group) 
-RestrictGroup(Filter groups (HAVING clause))
-OrderGroup(Sort groups (ORDER BY clause))
+RestrictGroup("Filter groups (HAVING clause)")
+OrderGroup("Sort groups (ORDER BY clause)")
 
 RestrictRows-->ColToGroup
 ColToGroup-->GroupFun
@@ -30,9 +30,9 @@ Group Functions
 ```mermaid
 graph LR;
 GroupFun
-AggDistinct(Aggregate distinct values (DISTINCT) )
+AggDistinct("Aggregate distinct values (DISTINCT) ")
 IgnoreValue(NULL values ignored by default )
-NestGroups(Nested aggregate functions (up to 2 levels))
+NestGroups("Nested aggregate functions (up to 2 levels)")
 
 GroupFun-->AggDistinct
 GroupFun-->IgnoreValue
@@ -75,7 +75,6 @@ Create a report to display the manager id and the salary of the lowest-paid empl
 Create a query that displays the total number of employees and, of that total, the number of employees hired in 2009, 2010, 2011, and 2012. Create appropriate column headings.
 
 ![](img-01/u06-i05.png)
-
 
 
 
