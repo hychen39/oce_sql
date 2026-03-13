@@ -8,23 +8,23 @@ export_on_save:
     html: true
 ---
 
-#  WS2-L6 Retrieving Data using suqueries
+#  WS2-L6 使用子查詢擷取資料
 
 ## 題目
 
 ### Q1
 <!-- No.2 -->
 
-Write a query to display the last name, department number, and salary of any employee whose department number and salary both match the department number and salary of any employee who earns a commission.
+撰寫查詢，顯示部門編號與薪資都與某位有佣金員工相同之員工的姓氏、部門編號與薪資。
 
 ### Q2
 <!-- No.6 -->
 
-Write a query to find all employees who earn more than the average salary in their departments. 
+撰寫查詢，找出所有薪資高於其所屬部門平均薪資的員工。
 
-Display the last name, salary, department ID, and the average salary for the department. Sort by average salary and round to two decimals. 
+顯示姓氏、薪資、部門編號，以及該部門的平均薪資。請依平均薪資排序，並四捨五入至小數點後兩位。
 
-Use aliases for the columns retrieved by the query as shown in the sample output.
+查詢所取出的欄位請依範例輸出使用欄位別名。
 
 ![](img-01/ws2-u06-i01.png)
 
@@ -32,29 +32,29 @@ Use aliases for the columns retrieved by the query as shown in the sample output
 ### Q3
 <!-- No.7 -->
 
-Find the last names of all employees who are not supervisors.
-(a) Do this by using the `NOT EXISTS` operator.
-(b) Do this by using the `NOT IN` operator.
+找出所有不是主管的員工姓氏。
+(a) 請使用 `NOT EXISTS` 運算子完成。
+(b) 請使用 `NOT IN` 運算子完成。
 
 ### Q4
 <!-- No.9 -->
 
-Write a query to display the last names of the employees who have one or more coworkers in their departments with later hire dates but higher salaries.
+撰寫查詢，顯示那些在同部門中至少有一位同事比自己晚到職但薪資更高之員工的姓氏。
 
 ### Q5
 <!-- No.10 -->
 
-Write a query to display the employee ID, last names, and department names of all the employees.
+撰寫查詢，顯示所有員工的員工編號、姓氏與部門名稱。
 
-Need to use a scalar subquery to retrieve the department name in the SELECT statement.
+必須在 `SELECT` 敘述中使用純量子查詢來取得部門名稱。
 
 ### Q6
 <!-- No.11 -->
-Write a query to display the department names of those departments whose total salary cost is above one-eighth (1/8) of the total salary cost of the whole company. 
+撰寫查詢，顯示總薪資成本高於全公司總薪資成本八分之一（1/8）的部門名稱。
 
-Use the `WITH` clause to write this query.
+請使用 `WITH` 子句撰寫此查詢。
 
-The column names in the report are `DEPARTMENT_NAME` and `DEPT_TOTAL`.
+報表欄位名稱為 `DEPARTMENT_NAME` 與 `DEPT_TOTAL`。
 
 
 

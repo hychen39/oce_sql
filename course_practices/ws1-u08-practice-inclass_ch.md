@@ -9,11 +9,11 @@ export_on_save:
 ---
 
 
-# U08 Using Subqueries to Solve Queries
+# U08 使用子查詢解題
 
-## 課堂練習: Pairwise comparison
+## 課堂練習：成對比較
 
-請先執行以下 DML 產生需要的測試資料
+請先執行以下 DML，產生需要的測試資料。
 
 ```sql
 update employees
@@ -21,11 +21,11 @@ update employees
     where employee_id in (125, 126);
 ```
 
-接著, 請撰寫 Query 完成以下的 reporting 要求:
+接著，請撰寫查詢完成以下報表需求：
 
-Display the details of the employees who are managed by the same manager and work in the same department as the employees with `EMPLOYEE_ID` 180 or 176 (公司內 last name 為 Taylor 的兩位員工).
+顯示與 `EMPLOYEE_ID` 180 或 176 的員工（公司內姓氏為 Taylor 的兩位員工）具有相同經理，且位於相同部門之員工詳細資料。
 
-這兩名員工的 manager_id 及 department_id 如下:
+這兩名員工的 `manager_id` 與 `department_id` 如下：
 
 ```
 employee_id manager_id department_id
@@ -34,11 +34,11 @@ employee_id manager_id department_id
 180	    120	    50
 ```
 
-The report contains the columns of `EMPLOYEE_ID`, `MANAGER_ID` and `DEPARTMENT_ID`.
+報表需包含 `EMPLOYEE_ID`、`MANAGER_ID` 與 `DEPARTMENT_ID` 欄位。
 
 
 
-### Solution
+### 參考解答
 
 ```sql
 select * 
@@ -51,11 +51,11 @@ where (manager_id, department_id)
         order by manager_id, department_id;
 ```
 
-## 課堂練習: Non-Pairwise comparison
+## 課堂練習：非成對比較
 
-Display the details of the employees who are managed by the same manager as the employees with `EMPLOYEE_ID` 180 or 176 and work in the same departments as the employees with `EMPLOYEE_ID` 180 or 176.
+顯示與 `EMPLOYEE_ID` 180 或 176 的員工具有相同經理，且也在這兩位員工所在部門工作的員工詳細資料。
 
-### Solution
+### 參考解答
 
 ```sql
 select * 

@@ -8,9 +8,9 @@ export_on_save:
 ---
 
 
-# U03 Restricting and Sorting Data
+# U03 篩選與排序資料
 
-## Concepts
+## 概念
 ```mermaid
 graph LR;
 Ch3-->LimitRow
@@ -45,101 +45,99 @@ SubVar-->ReuseVar("重覆使用替代變數的值 &&")
 
 ### P1
 
-Because of budget issues, the HR department needs a report that displays the last name and salary of employees who earn more than `$12,000`. Sort rows according to the the salary.
+由於預算考量，人力資源部門需要一份報表，顯示薪水高於 `$12,000` 的員工姓氏與薪資。請依薪資排序資料列。
 
 ![](img-01/u03-i01.png)
 
 
 ### P2
 
-Create a report that displays the last name and department
-number for employee number 176.
+建立一份報表，顯示員工編號 176 的姓氏與部門編號。
 
 ### P3 
-The HR department needs to find high-salaried and low-salaried employees. Create a report to display the last name and salary for any employee whose salary **is not** in the range `$5,000` through `$12,000`. 
+人力資源部門需要找出高薪與低薪員工。請建立一份報表，顯示薪水**不在** `$5,000` 到 `$12,000` 區間內之員工的姓氏與薪資。
 
 ![](img-01/u03-i02.png)
 
 
 ### P4
 
-Create a report to display the last name, job ID, and hire date for employees with the last names of Matos and Taylor. Order the query in ascending order by hire date.
+建立一份報表，顯示姓氏為 Matos 與 Taylor 的員工之姓氏、職務代碼與到職日。請依到職日遞增排序。
 
 ![](img-01/u03-i03.png)
 
 ### P5
 
-Display the last name and department ID of all employees in department 20 or department 50 in ascending alphabetical order by last_name.
+顯示所有位於部門 20 或部門 50 的員工姓氏與部門編號，並依 `last_name` 字母順序遞增排序。
 
 ![](img-01/u03-i04.png)
 
 
 ### P6
 
-Create a report to display the last name and salary of employees who earn between `$5,000` and `$12,000`, and are in department 20 or department 50. Label the columns Employee and Monthly Salary, respectively.
+建立一份報表，顯示薪水介於 `$5,000` 到 `$12,000` 且位於部門 20 或部門 50 的員工姓氏與薪資。請將欄位名稱分別標示為 `Employee` 與 `Monthly Salary`。
 
 ![](img-01/u03-i05.png)
 
 
 ### P7
 
-The HR department needs a report that displays the last name and hire date of all employees who were hired in 2010.
+人力資源部門需要一份報表，顯示所有於 2010 年到職之員工的姓氏與到職日。
 
 
 ### P8
 
-Create a report to display the last name and job title of all employees who do not have a manager.
+建立一份報表，顯示所有沒有經理的員工之姓氏與職稱。
 
 
 ### P9
 
-Create a report to display the last name, salary, and commission of all employees who earn commissions. 
+建立一份報表，顯示所有有領取佣金之員工的姓氏、薪資與佣金。
 
-Sort the data in descending order of salary and commissions.
+請依薪資與佣金遞減排序資料。
 
-Use the column’s **numeric position** in the ORDER BY clause.
+在 `ORDER BY` 子句中請使用欄位的**位置編號**。
 
 ![](img-01/u03-i06.png)
 
 
 ### P10
 
-Members of the HR department want to have more flexibility with the queries that you are writing. They would like a report that displays the last name and salary of employees who
-earn more than an amount that the user specifies after a prompt. 
+HR 部門成員希望查詢能更有彈性。他們想要一份報表，顯示薪資高於使用者提示輸入金額之員工的姓氏與薪資。
 
-For example, If you enter 12000 when prompted, the report displays the following results:
+例如，若提示輸入 `12000`，報表應顯示如下結果：
 
 ![](img-01/u03-i07.png)
 
 ### P11
 
-The HR department wants to run reports based on a manager. 
+人力資源部門希望能依據經理來產生報表。
 
-Create a query that prompts the user for a manager ID and the column name for sorting. The query generates the employee ID, last name, salary, and department for that manager’s employees and sorts returned rows according to the given column name.  
+請建立一個查詢，提示使用者輸入經理編號與排序欄位名稱。查詢需列出該經理所管理員工的員工編號、姓氏、薪資與部門，並依指定欄位排序。
 
 <!-- The HR department wants the ability to sort the report on a selected column.  -->
 
-You can test the data with the following values:
+可以用下列測試資料驗證：
 - manager_id = 103, sorted by `last_name`
 - manager_id = 201, sorted by `salary`
 - manager_id = 124, sorted by `employee_id`
 
 ### P12
 
-Display the last names of all employees where the third letter of the name is “a.”
+顯示所有姓氏第三個字母為 `a` 的員工姓氏。
 
 ### P13
 
-Display the last names of all employees who have both an “a” and an “e” in their last name.
+顯示所有姓氏中同時包含 `a` 與 `e` 的員工姓氏。
 
 ### P14
 
-Display the last name, job, and salary for all employees whose jobs are either that of a sales representative or a stock clerk, and whose salaries are not equal to `$2,500`, `$3,500`, or `$7,000`.
+顯示所有職務為業務代表或倉儲管理員，且薪資不等於 `$2,500`、`$3,500` 或 `$7,000` 的員工之姓氏、職務與薪資。
 
 ![](img-01/u03-i08.png)
 
 
 ### P15
 
-Create a report to display the last name, salary, and commission for all employees whose commission is 20%.
+建立一份報表，顯示所有佣金比例為 20% 之員工的姓氏、薪資與佣金。
 

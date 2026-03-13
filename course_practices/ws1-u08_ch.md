@@ -9,13 +9,13 @@ export_on_save:
 ---
 
 
-# U08 Using Subqueries to Solve Queries
+# U08 使用子查詢解題
 
 
 ```mermaid
 graph LR;
 
-SubqueryTypeByRow("依回傳列數分類 subquery (Inner Query)")-->SingleRowSubquery("單列子查詢 Single-Row")
+SubqueryTypeByRow("依回傳列數分類 subquery（內部查詢）")-->SingleRowSubquery("單列子查詢 Single-Row")
 SubqueryTypeByRow-->MultipleRowSubquery("多列子查詢 Multiple-Row")
 SingleRowSubquery-->SingleRowOperator("單列查詢運算子 Single-Row Operator")
 MultipleRowSubquery-->MultipleRowOperator("多列查詢運算子")
@@ -28,7 +28,7 @@ WhereToUse-->UsedInHavingClause("HAVING clause")
 UsedInWhereClause-->ExecuteOrder("執行順序")
 UsedInHavingClause-->ExecuteOrder
 
-SubqueryTypeByColumn("依欄位數分類 subquery")-->SingleColumnSubquery("單欄 subquery (Scalar Subquery)")
+SubqueryTypeByColumn("依欄位數分類 subquery")-->SingleColumnSubquery("單欄 subquery（純量子查詢）")
 SubqueryTypeByColumn-->MultipleColumnSubquery("多欄 Subquery")
 MultipleColumnSubquery-->PairwiseCompare("成對比較")
 MultipleColumnSubquery-->NonPairwiseCompare("非成對比較")
@@ -40,37 +40,36 @@ MultipleRowOpEquivalent("多列比較運算子間的對等性")
 
 ### Q1
 
-Write a query to display the employee number (`EMPLOYEE_ID`), last name(`LAST_NAME`), and
-salary(`SALARY`) of all employees who earn more than the average salary and who work in a department with any employee whose last name contains the letter "u."
+撰寫查詢，顯示所有薪資高於平均薪資，且與姓氏中包含字母 `u` 的任一員工位於同一部門之員工的員工編號（`EMPLOYEE_ID`）、姓氏（`LAST_NAME`）與薪資（`SALARY`）。
 
 <!-- A-8, multiple-row operator, group function in subquery  -->
 
 ### Q2 
 
-Create a report that displays a list of all employees whose salary is more than the salary of any employee from department 60. The report contains only the last names (`LAST_NAME`) of the employees.
+建立一份報表，列出所有薪資高於部門 60 任一員工薪資的員工。報表只需顯示員工姓氏（`LAST_NAME`）。
 
 <!-- A7, multiple-row operator -->
 
 ### Q3
 
-Create a report that displays the employee number (`EMPLOYEE_ID`), last name(`LAST_NAME`), and salary(`SALARY`) of all employees who earn more than the average salary. Sort the results in ascending order by salary.
+建立一份報表，顯示所有薪資高於平均薪資之員工的員工編號（`EMPLOYEE_ID`）、姓氏（`LAST_NAME`）與薪資（`SALARY`）。請依薪資遞增排序。
 
 <!-- A2, group function in subquery -->
 
 
 ### Q4
 
-Which two statements are true regarding multiple-row subqueries? (Choose two.) 
+關於多列子查詢，下列哪兩項敘述正確？（選兩項）
 
-A. They can contain group functions.
+A. 可以包含群組函數。
 
-B. They always contain a subquery within a subquery.
+B. 一定會包含巢狀子查詢。
 
-C. They use the < ALL operator to imply less than the maximum.
+C. 可以使用 `< ALL` 運算子來表示小於最大值。
 
-D. They can be used to retrieve multiple rows from a single table only.
+D. 只能用來從單一資料表取回多列資料。
 
-E. They should not be used with the NOT IN operator in the main query if NULL is likely to be a part of the result of the subquery.
+E. 如果子查詢結果可能包含 `NULL`，主查詢就不應搭配 `NOT IN` 運算子使用。
 
 <!-- Q-89, 1z0-47 dump -->
 
@@ -78,19 +77,19 @@ E. They should not be used with the NOT IN operator in the main query if NULL is
 
 ### Q5 
 
-Which three statements are true reading subquery?
+關於子查詢，下列哪三項敘述正確？
 
-A. A Main query can have many subqueries.
+A. 一個主查詢可以包含多個子查詢。
 
-B. A subquery can have more than one main query.
+B. 一個子查詢可以對應多個主查詢。
 
-C. The subquery and main query must retrieve date from the same table.
+C. 子查詢與主查詢必須從同一個資料表擷取資料。
 
-D. The subquery and main query can retrieve data from different tables.
+D. 子查詢與主查詢可以從不同資料表擷取資料。
 
-E. Only one column or expression can be compared between the subquery and main query.
+E. 子查詢與主查詢之間只能比較一個欄位或一個運算式。
 
-F. Multiple columns or expressions can be compared between the subquery and main query.
+F. 子查詢與主查詢之間可以比較多個欄位或多個運算式。
 
 <!-- Q-41, 1z0-47 dump -->
 
@@ -98,28 +97,28 @@ F. Multiple columns or expressions can be compared between the subquery and main
 
 ### Q6
 
-View the Exhibit and examine the data in the PRODUCT_INFORMATION table. 
+請查看附圖並檢視 `PRODUCT_INFORMATION` 資料表中的資料。
 
 ![](img-01/table-product_information.png)
 
-Which two tasks would require subqueries? (Choose two.)
+下列哪兩個工作需要用到子查詢？（選兩項）
 
-A. displaying all the products whose minimum list prices are more than average list price of products having the status orderable
+A. 顯示所有最低定價高於 `status = orderable` 產品平均定價的產品
 
-B. displaying the total number of products supplied by supplier 102071 and having product status OBSOLETE
+B. 顯示供應商 102071 所供應，且產品狀態為 `OBSOLETE` 的產品總數
 
-C. displaying the number of products whose list prices are more than the average list price
+C. 顯示定價高於平均定價的產品數量
 
-D. displaying all supplier IDs whose average list price is more than 500
+D. 顯示平均定價高於 500 的所有供應商編號
 
-E. displaying the minimum list price for each product status
+E. 顯示各產品狀態的最低定價
 
-除了選出正確選項外, 還要寫出該選項所需的 Query。
+除了選出正確選項外，還要寫出該選項所需的查詢。
 
 
 ### Q7
 
-找出每個 location 下最資深的員工(可能有多個), 列出員工的 employee_id, first_name, hire_date, department id, location id.
+找出每個 location 下到職最早的員工（可能有多位），列出員工的 `employee_id`、`first_name`、`hire_date`、`department_id` 與 `location_id`。
 
 <!-- Multiple-Row, Multiple-Column subquery -->
 

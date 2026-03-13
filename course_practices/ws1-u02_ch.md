@@ -9,14 +9,14 @@ export_on_save:
 @import "../css/article_01.css"
 
 
-# U02 - Retrieving Data Using the SQL SELECT Statement
+# U02 - 使用 SQL SELECT 敘述擷取資料
 
-## Concept Map
+## 概念圖
 
 ```mermaid
 graph LR;
-SelectCol("自表格中選取欄位")-->ColArithExp("欄位運算 Arithmetic Op.")
-ColArithExp-->ColAlias("欄位命名 Alias ")
+SelectCol("從資料表中選取欄位")-->ColArithExp("欄位運算 Arithmetic Op.")
+ColArithExp-->ColAlias("欄位別名 Alias ")
 SelectCol-->ColConcate("欄位串接 Concatenation")
 ColConcate-->ColAlias
 ColArithExp-->QOperator("Quote Operator q")
@@ -25,41 +25,41 @@ ColArithExp-->QOperator("Quote Operator q")
 ## 練習
 ### P1
 
-The HR department wants a query to display the last name, job ID, hire date, and employee ID for each employee, with the employee ID appearing first. 
+人力資源部門希望撰寫一個查詢，顯示每位員工的姓氏、職務代碼、到職日與員工編號，且員工編號需放在最前面。
 
-Provide an alias `STARTDATE` for the `HIRE_DATE` column. 
+請為 `HIRE_DATE` 欄位指定別名 `STARTDATE`。
 
 ![](img-01/u02-i01.png)
 
 ### P2 
 
-The HR department wants a query to display all unique job IDs from the `EMPLOYEES` table.
+人力資源部門希望查詢 `EMPLOYEES` 資料表中所有不重複的職務代碼。
 
 
 ![](img-01/u02-i02.png)
 
 ### P3
 
-The HR department wants more descriptive column headings for its report on employees.
+人力資源部門希望員工報表的欄位標題更具描述性。
 
-Based on the query in the P1, name the report columns to `Emp #`, `Employee`, `Job`, and `Hire Date`, respectively.
+請以上一題 P1 的查詢為基礎，將報表欄位名稱依序命名為 `Emp #`、`Employee`、`Job` 與 `Hire Date`。
 
 ![](img-01/u02-i03.png)
 
 ### P4 
-The HR department has requested a report of all employees and their job IDs. 
-Display the last name concatenated with the job ID (separated by a comma and space) and name the column `Employee` and `Title`.
+人力資源部門要求一份列出所有員工及其職務代碼的報表。
+請將姓氏與職務代碼串接後顯示（中間以逗號加空白分隔），並將欄位命名為 `Employee` 和 `Title`。
 
 
 ![](img-01/u02-i04.png)
 
 ### P5 
 
-HR 部門要顯示各員工的經理的員工編號. 顯示的格式為:
+HR 部門要顯示各員工之經理的員工編號。顯示格式如下：
 
 ` [Employee_id] [Last_name]'s manager_id is [manager_id] `
 
-中括號內為欄位名稱。此欄位命名為 `Employee's Manager ID List`
+中括號內為欄位名稱。請將此欄位命名為 `Employee's Manager ID List`。
 
 
 

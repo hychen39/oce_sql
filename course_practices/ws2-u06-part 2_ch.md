@@ -8,23 +8,23 @@ export_on_save:
     html: true
 ---
 
-#  WS2-L6 Retrieving Data using suqueries
-- 主題: Recursive queries
+#  WS2-L6 使用子查詢擷取資料
+- 主題：遞迴查詢
 ## 題目
 
 ### Q1
 
-使用 Recursive query, 計算以下算式的總合:
+請使用遞迴查詢計算下列算式總和：
 
 $ 1 + 2^2 + 3^2 + ... + 10^2 $ 
 
-產生的報表如下:
+產生的報表如下：
 
 ![](img-01/ws2-u06-i02.png)
 
 ### Q2
 
-有以下城市間的運送成本, 城市間可以透過轉運, 送到其它目的地. 例如 A > B > C 途程, 其成本為 $C_{AB}+C_{BC} = 2 + 3 = 5$。請用 Recursive query 查出所有可能的運送途程及總成本。
+已知下列城市之間的運送成本，城市之間可以透過轉運送達其他目的地。例如途程 A > B > C，其成本為 $C_{AB}+C_{BC} = 2 + 3 = 5$。請使用遞迴查詢找出所有可能的運送路徑及總成本。
 
 from\to | A | B | C | D 
 --|--|--|--|--
@@ -36,7 +36,7 @@ D | |  |  |
 
 ![](img-01/ws2-u06-i03.png)
 
-執行以下程式建立需要的 table 及資料列:
+請執行以下程式建立所需資料表與資料列：
 
 ```sql {class=line-numbers}
 create table trans(src_city varchar2(1), 

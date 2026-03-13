@@ -9,12 +9,12 @@ export_on_save:
 ---
 
 
-# U07 Displaying Data from Multiple Tables Using Joins
+# U07 使用 Join 從多個資料表顯示資料
 
 
 ```mermaid
 graph LR;
-  JoinType("Join 的形式")
+  JoinType("Join 的類型")
 
   JoinType-->NaturalJoin("Natural Join or Equal Join")
   JoinType-->SelfJoin("Self Join")
@@ -24,8 +24,8 @@ graph LR;
   OuterJoin-->LeftOuter("Left Outer Join")
   OuterJoin-->RightOuter("Right Outer Join")
 
-  JoinMethod("Join 的方式")
-  UseSameColName("自動使用兩個表格中相同的欄位名稱 NATURE JOIN table")
+  JoinMethod("Join 的寫法")
+  UseSameColName("自動使用兩個資料表中相同的欄位名稱 NATURAL JOIN table")
   SpecifyColumn("指定欄位 JOIN table USING column")
   SpecifyCondition("指定條件 JOIN table ON condition")
   JoinMethod-->UseSameColName
@@ -36,22 +36,22 @@ graph LR;
 ## 題目
 
 ### Q1
-Write a query for the HR department to produce the addresses of all the departments. Use the `LOCATIONS` and `COUNTRIES` tables. 
+請為 HR 部門撰寫查詢，以列出所有部門所在地的地址。請使用 `LOCATIONS` 與 `COUNTRIES` 資料表。
 
-Show the location ID, street address, city, state or province, and country in the output. Use a `NATURAL JOIN` to produce the results.
+輸出需包含 location ID、街道地址、城市、州或省，以及國家。請使用 `NATURAL JOIN` 完成查詢。
 
 ![](img-01/u07-i01.png)
 
 
 ### Q2
 
-The HR department needs a report of employees in Toronto. Display the last name, job, department number, and the department name for all employees who work in Toronto.
+HR 部門需要一份多倫多員工報表。請顯示所有在 Toronto 工作員工的姓氏、職務、部門編號與部門名稱。
 
 ![](img-01/u07-i03.png)
 
 ### Q3
 
-The HR department needs a report on job grades and salaries. Create a query that displays the name, job, department name, salary, and grade for all employees. Use the following script to create the `JOB_GRADES` table.
+HR 部門需要一份職等與薪資報表。請建立查詢，顯示所有員工的姓名、職務、部門名稱、薪資與職等。請先使用下列程式建立 `JOB_GRADES` 資料表。
 
 ```sql
 create table job_grades (grade_level varchar2(1), lowest_sal number, highest_sal NUMBER);
@@ -65,29 +65,29 @@ insert into job_grades values('F', 25000, 40000);
 commit;
 ```
 
-The outputs of the query should look like the following:
+查詢輸出應類似如下：
 
 ![](img-01/u07-i04.png)
 
 
 ### Q4 
 
-Create a report to display employees’ last names and employee numbers along with their managers’ last names and manager numbers. The result should contain the employees who have no managers. 
+建立一份報表，顯示員工的姓氏與員工編號，以及其經理的姓氏與經理編號。結果中必須包含沒有經理的員工。
 
 ![](img-01/u07-i05.png)
 
 
 ### Q5
 
-The HR department wants to determine the names of all employees who were hired after Davies. 
+HR 部門希望找出所有在 Davies 之後到職的員工姓名。
 
-Create a query to display the name and hire date of any employee hired after employee Davies.
+請建立查詢，顯示所有於員工 Davies 之後到職之員工的姓名與到職日。
 
 ![](img-01/u07-i06.png)
 
 ### Q6
 
-The HR department needs to find the names and hire dates of all employees who were hired before their managers, along with their managers’ names and hire dates.
+HR 部門需要找出所有比其經理更早到職的員工姓名與到職日，並一併顯示其經理姓名與到職日。
 
 ![](img-01/u07-i07.png)
 

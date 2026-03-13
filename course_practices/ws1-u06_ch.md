@@ -9,9 +9,9 @@ export_on_save:
 ---
 
 
-# U06 Reporting Aggregated Data Using the Group Functions
+# U06 使用群組函數製作彙總報表
 
-資料列分群並計算分群後的彙總資料
+將資料列分群後，計算各群的彙總資料。
 ```mermaid
 graph TD;
 RestrictRows("分群前篩選資料 WHERE clause")
@@ -43,36 +43,36 @@ GroupFun-->NestGroups
 
 ### Q1
 
-Write a query to display the minimum, maximum, sum, and average salary for each job type. Round your results to the nearest whole number.
+撰寫查詢，顯示各職務類型的最低薪資、最高薪資、總薪資與平均薪資。結果請四捨五入到最接近的整數。
 
 ![](img-01/u06-i01.png)
 
 ### Q2 
 
-Write a query to display the number of people with the same job. 
+撰寫查詢，顯示每種職務的人數。
 
-Generalize the query so that a user in the HR department is prompted for a job title.
+請將查詢泛化，讓 HR 使用者可輸入職務代碼作為查詢條件。
 
-For example, when the user enters `IT_PROG`, he gets the following report:
+例如，當使用者輸入 `IT_PROG` 時，應得到如下報表：
 
 ![](img-01/u06-i02.png)
 
 ### Q3
 
-Determine the number of distinct managers in the company. Use the `manager_id` column in the `employees` table to determine.
+請利用 `employees` 資料表中的 `manager_id` 欄位，計算公司內不同經理的人數。
 
 ![](img-01/u06-i03.png)
 
 ### Q4
 
-Create a report to display the manager id and the salary of the lowest-paid employee for that manager. Exclude anyone whose manager is not known. Exclude any groups where the minimum salary is $6,000 or less. Sort the output in descending order of salary.
+建立一份報表，顯示各經理的編號，以及其所管理員工中最低薪者的薪資。不需列出經理未知的員工；另外，最低薪資為 `$6,000` 或以下的群組也要排除。請依薪資遞減排序。
 
 ![](img-01/u06-i04.png)
 
 
 ### Q5
 
-Create a query that displays the total number of employees and, of that total, the number of employees hired in 2009, 2010, 2011, and 2012. Create appropriate column headings.
+建立查詢，顯示員工總數，以及其中於 2009、2010、2011 與 2012 年到職的員工人數。請設定適當的欄位名稱。
 
 ![](img-01/u06-i05.png)
 

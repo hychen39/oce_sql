@@ -10,32 +10,32 @@ export_on_save:
 @import "../css/article_01.css"
 
 
-# U01 - Entity Relationship (ER) Model and Table Structure
+# U01 - 實體關係（ER）模型與資料表結構
 
-## Concepts
+## 概念
 
 ```mermaid
 graph LR;
-HRDBTable("HR Database Table");
+HRDBTable("HR 資料庫資料表");
 
-ERModel("ER Model")-->HRDBTable;
-DevTool("Development Tool")
+ERModel("ER 模型")-->HRDBTable;
+DevTool("開發工具")
 ```
 
 ## 練習 1
 
 ![](img-01/u01-i01.png)
 
-參考所附之 ER Diagram, 回答以下的問題
-1. Locations 和 Departments 兩個 Entity 之間的數量關係?
-2. Departments 與  Employees 兩個 Entity 之間的數量關係?
-3. Employees 和自己間的的數量關係?
-4. 要取得員工部間所在的區域名稱(region_name), 需要串接(join)那幾張表格
+參考附上的 ER 圖，回答下列問題：
+1. `Locations` 和 `Departments` 兩個實體之間的數量關係為何？
+2. `Departments` 和 `Employees` 兩個實體之間的數量關係為何？
+3. `Employees` 與自身之間的數量關係為何？
+4. 若要取得員工部門所在區域的名稱（`region_name`），需要串接（join）哪些資料表？
 
-## Activity 2
+## 活動 2
 
-1. 使用 SQLDeveloper 連線
-2. 執行以下的 Query Statement 
+1. 使用 SQL Developer 連線
+2. 執行以下查詢敘述：
 ```
 select * from employees;
 ```
